@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartX Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <h2 class="logo">SmartX</h2>
+    <nav>
+      <a class="active">Dashboard</a>
+      <a>Products</a>
+      <a>Users</a>
+      <a>Analytics</a>
+      <a>Settings</a>
+    </nav>
+  </aside>
+
+  <!-- Overlay (mobile only) -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Topbar -->
+    <header class="topbar">
+      <button class="hamburger" id="hamburger">☰</button>
+      <h1>Dashboard</h1>
+      <div class="profile">👤</div>
+    </header>
+
+    <!-- Content -->
+    <section class="content">
+      <div class="cards">
+        <div class="card">Users<br><strong>1,240</strong></div>
+        <div class="card">Revenue<br><strong>$12k</strong></div>
+        <div class="card">Orders<br><strong>320</strong></div>
+        <div class="card">Growth<br><strong>+18%</strong></div>
+      </div>
+    </section>
+    <!-- Chart Section -->
+<section class="chart-section">
+  <h2>Revenue Overview</h2>
+  <canvas id="revenueChart"></canvas>
+</section>
+<!-- Recent Activity -->
+<section class="table-section">
+  <h2>Recent Orders</h2>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer</th>
+          <th>Status</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>#1023</td>
+          <td>Naina</td>
+          <td class="status success">Completed</td>
+          <td>$120</td>
+        </tr>
+
+        <tr>
+          <td>#1024</td>
+          <td>Rahul</td>
+          <td class="status pending">Pending</td>
+          <td>$90</td>
+        </tr>
+
+        <tr>
+          <td>#1025</td>
+          <td>Aditi</td>
+          <td class="status success">Completed</td>
+          <td>$240</td>
+        </tr>
+
+        <tr>
+          <td>#1026</td>
+          <td>Arjun</td>
+          <td class="status failed">Failed</td>
+          <td>$60</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
